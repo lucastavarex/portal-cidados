@@ -33,7 +33,7 @@ export const catalogData: DataCatalogItem[] = [
       "Novas edificações",
       "Incorporação imobiliária",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Habitação e Mercado Imobiliário",
       "São Paulo",
@@ -82,7 +82,7 @@ export const catalogData: DataCatalogItem[] = [
       "Verticalização",
       "IPTU São Paulo",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Habitação e Mercado Imobiliário",
       "São Paulo",
@@ -139,7 +139,7 @@ export const catalogData: DataCatalogItem[] = [
       "VLT",
       "Integração de modais",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Mobilidade", "Brasil", "Disponível para download"],
     dataset_info: [
       {
@@ -194,7 +194,7 @@ export const catalogData: DataCatalogItem[] = [
       "Logística urbana",
       "Ganhos financeiros",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Trabalho e Renda", "São Paulo", "Sala segura do Insper"],
     dataset_info: [
       {
@@ -208,7 +208,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "5",
+    id: "6",
     title: "Imposto sobre Transmissão de Bens Imóveis (ITBI) [2006-2025]",
     description:
       "Registros de arrecadação e valores de transferências de imóveis no município de São Paulo.\nConjunto de dados tratados e enriquecidos pelo Centro de Estudos das Cidades.",
@@ -222,7 +222,7 @@ export const catalogData: DataCatalogItem[] = [
       "Transações imobiliárias",
       "Imposto",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Habitação e Mercado Imobiliário",
       "São Paulo",
@@ -240,33 +240,6 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "6",
-    title: "Indicadores de mortalidade por distrito [2010-2019]",
-    description:
-      'Indicadores de mortalidade (óbitos observados, esperados e risco relativo) por distrito administrativo de São Paulo, de 2010 a 2019. Considera quatro causas: diabetes, doenças cerebrovasculares, doenças isquêmicas do coração e mortalidade materna.\nConjunto de dados preparado para o relatório "Síntese de evidências sobre saúde no município de São Paulo" [2024].',
-    theme: "Saúde",
-    region: "São Paulo",
-    accessMethod: "Disponível para download",
-    keywords: [
-      "Mortalidade prematura",
-      "Mortalidade",
-      "Desigualdade urbana",
-      "Saúde pública",
-      "Mortalidade materna",
-    ],
-    createdAt: "2026-09-24",
-    tags: ["Saúde", "São Paulo", "Disponível para download"],
-    dataset_info: [
-      {
-        dataset_title: "Indicadores de mortalidade por distrito [2010-2019]",
-        dataset_description:
-          "Indicadores de mortalidade (óbitos observados, esperados e risco relativo) por distrito administrativo de São Paulo, de 2010 a 2019. Considera quatro causas: diabetes, doenças cerebrovasculares, doenças isquêmicas do coração e mortalidade materna.",
-        dataset_link:
-          "https://dataverse.datascience.insper.edu.br/dataset.xhtml?persistentId=doi:10.60873/FK2/CDXI9B",
-      },
-    ],
-  },
-  {
     id: "7",
     title: "Loft [2019-2026]",
     description:
@@ -275,7 +248,7 @@ export const catalogData: DataCatalogItem[] = [
     region: "Brasil",
     accessMethod: "Sala segura do Insper",
     keywords: ["Imóveis", "Transações imobiliárias", "Residências", "Moradia"],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Habitação e Mercado Imobiliário",
       "Brasil",
@@ -307,7 +280,7 @@ export const catalogData: DataCatalogItem[] = [
       "Ilhas de calor",
       "Habitação",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Clima e Meio Ambiente",
       "Rio de Janeiro",
@@ -326,6 +299,33 @@ export const catalogData: DataCatalogItem[] = [
   },
   {
     id: "9",
+    title: "Indicadores de mortalidade por distrito [2010-2019]",
+    description:
+      'Indicadores de mortalidade (óbitos observados, esperados e risco relativo) por distrito administrativo de São Paulo, de 2010 a 2019. Considera quatro causas: diabetes, doenças cerebrovasculares, doenças isquêmicas do coração e mortalidade materna.\nConjunto de dados preparado para o relatório "Síntese de evidências sobre saúde no município de São Paulo" [2024].',
+    theme: "Saúde",
+    region: "São Paulo",
+    accessMethod: "Disponível para download",
+    keywords: [
+      "Mortalidade prematura",
+      "Mortalidade",
+      "Desigualdade urbana",
+      "Saúde pública",
+      "Mortalidade materna",
+    ],
+    createdAt: "2026-09-25",
+    tags: ["Saúde", "São Paulo", "Disponível para download"],
+    dataset_info: [
+      {
+        dataset_title: "Indicadores de mortalidade por distrito [2010-2019]",
+        dataset_description:
+          "Indicadores de mortalidade (óbitos observados, esperados e risco relativo) por distrito administrativo de São Paulo, de 2010 a 2019. Considera quatro causas: diabetes, doenças cerebrovasculares, doenças isquêmicas do coração e mortalidade materna.",
+        dataset_link:
+          "https://dataverse.datascience.insper.edu.br/dataset.xhtml?persistentId=doi:10.60873/FK2/CDXI9B",
+      },
+    ],
+  },
+  {
+    id: "10",
     title: "Pesquisa Nacional de Mobilidade Urbana (PEMOB) [2019-2024]",
     description:
       "Questionário de mobilidade urbana municipal e intermunicipal preenchido por gestores de transporte público em cidades brasileiras com mais de 100 mil habitantes. Inclui dados sobre infraestrutura, frota, demanda, tarifas e políticas de mobilidade.",
@@ -339,7 +339,7 @@ export const catalogData: DataCatalogItem[] = [
       "SIMU",
       "Políticas de mobilidade",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Mobilidade", "Brasil", "Disponível para download"],
     dataset_info: [
       {
@@ -353,7 +353,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "10",
+    id: "11",
     title: "Programas educacionais do iFood [2022-2026]",
     description:
       "Informações sobre participação dos entregadores parceiros do iFood nos programas Decola e Meu Diploma do Ensino Médio (MDEM).\nConjunto de dados disponibilizados a partir da parceria do CDIA com o iFood.",
@@ -367,7 +367,7 @@ export const catalogData: DataCatalogItem[] = [
       "Qualificação profissional",
       "Ensino Médio",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Educação", "São Paulo", "Sala segura do Insper"],
     dataset_info: [
       {
@@ -380,7 +380,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "11",
+    id: "12",
     title: "QuintoAndar [2011-2025]",
     description:
       "Dados detalhados sobre anúncios e contratos imobiliários, incluindo características dos imóveis e dos condomínios, nas cidades com atuação do QuintoAndar.",
@@ -388,7 +388,7 @@ export const catalogData: DataCatalogItem[] = [
     region: "Brasil",
     accessMethod: "Sala segura do Insper",
     keywords: ["Imóveis", "Transações imobiliárias", "Residências", "Moradia"],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Habitação e Mercado Imobiliário",
       "Brasil",
@@ -406,7 +406,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "12",
+    id: "13",
     title: "Rotas dos entregadores parceiros do iFood [2022-2026]",
     description:
       "Registros de velocidade e fluxo das rotas de entregas feitas pelos entregadores parceiros do iFood nas vias principais.\nConjunto de dados disponibilizados a partir da parceria do CDIA com o iFood.",
@@ -420,7 +420,7 @@ export const catalogData: DataCatalogItem[] = [
       "Velocidade",
       "Fluxo",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Mobilidade", "São Paulo", "Sala segura do Insper"],
     dataset_info: [
       {
@@ -433,7 +433,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "13",
+    id: "14",
     title: "Sinistros de Trânsito [2022-2025]",
     description:
       "Sinistros de trânsito em São Paulo (SP) no período de 2022 a 2025. Dados agregados e compatibilizados do InfoSiga. Sinistros individuais foram agregados em trechos de vias usando fuzzy matching e análise de distância do sinistro até o trecho mais próximo.",
@@ -446,7 +446,7 @@ export const catalogData: DataCatalogItem[] = [
       "Mobilidade urbana",
       "Faixa Azul",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Mobilidade", "São Paulo", "Disponível para download"],
     dataset_info: [
       {
@@ -466,7 +466,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "14",
+    id: "15",
     title:
       "Trechos com Faixas Dedicadas a Motociclistas (Faixa Azul) [2022-2025]",
     description:
@@ -480,7 +480,7 @@ export const catalogData: DataCatalogItem[] = [
       "Faixa Azul",
       "Políticas de mobilidade",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: ["Mobilidade", "São Paulo", "Disponível para download"],
     dataset_info: [
       {
@@ -494,7 +494,7 @@ export const catalogData: DataCatalogItem[] = [
     ],
   },
   {
-    id: "15",
+    id: "16",
     title: "Índice GeoSES [2010]",
     description:
       "Índice socioeconômico espacial GeoSES calculado por área de ponderação no município de São Paulo. O índice pondera dimensões de educação, mobilidade, pobreza, privação material, riqueza, renda e segregação, usando dados da Amostra do Censo Demográfico de 2010.",
@@ -507,7 +507,7 @@ export const catalogData: DataCatalogItem[] = [
       "Estrutura socioeconômica urbana",
       "Vulnerabilidade social",
     ],
-    createdAt: "2026-09-24",
+    createdAt: "2026-09-25",
     tags: [
       "Multidisciplinar e Transversal",
       "São Paulo",
