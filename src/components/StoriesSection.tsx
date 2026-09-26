@@ -16,11 +16,29 @@ export function StoriesSection() {
   }>({});
   const [hoveredStoryId, setHoveredStoryId] = useState<string | null>(null);
   const stories = useMemo(() => getStoriesForHome(), []);
-  // Duplicate slides so loop mode works with ~3.25 slidesPerView and only 4 stories
-  const carouselStories = useMemo(() => [...stories, ...stories], [stories]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const swiperRef = useRef<SwiperType | null>(null);
+  const nextArrowRef = useRef<HTMLButtonElement>(null);
   const [isReady, setIsReady] = useState(false);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
+  const syncEdges = (swiper: SwiperType) => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
+
+  const slidesOffsetAfter = useRef(function (this: SwiperType) {
+    const icon = nextArrowRef.current?.querySelector("svg");
+    if (!icon || !this.el) return 0;
+    return Math.max(
+      0,
+      Math.round(
+        this.el.getBoundingClientRect().right -
+          icon.getBoundingClientRect().right,
+      ),
+    );
+  }).current;
 
   // Effect para gerenciar a animação de imagens no hover
   useEffect(() => {
@@ -156,15 +174,18 @@ export function StoriesSection() {
           <button
             type="button"
             onClick={() => swiperRef.current?.slidePrev()}
-            className="p-1 cursor-pointer"
+            disabled={isBeginning}
+            className="p-1 cursor-pointer disabled:cursor-default disabled:opacity-30"
             aria-label="Slide anterior"
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
           <button
+            ref={nextArrowRef}
             type="button"
             onClick={() => swiperRef.current?.slideNext()}
-            className="p-1 cursor-pointer"
+            disabled={isEnd}
+            className="p-1 cursor-pointer disabled:cursor-default disabled:opacity-30"
             aria-label="Próximo slide"
           >
             <ArrowRight className="h-5 w-5" />
@@ -176,20 +197,25 @@ export function StoriesSection() {
         <Swiper
           slidesPerView="auto"
           spaceBetween={16}
-          loop
-          loopAdditionalSlides={2}
+          slidesOffsetAfter={slidesOffsetAfter}
           grabCursor
+          watchOverflow
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
+            syncEdges(swiper);
             setIsReady(true);
           }}
+          onSlideChange={syncEdges}
+          onReachBeginning={syncEdges}
+          onReachEnd={syncEdges}
+          onFromEdge={syncEdges}
           className={`overflow-visible! cursor-grab active:cursor-grabbing transition-opacity duration-150 ${
             isReady ? "opacity-100" : "opacity-0"
           }`}
         >
-          {carouselStories.map((story, index) => (
+          {stories.map((story) => (
             <SwiperSlide
-              key={`${story.id}-${index}`}
+              key={story.id}
               className="w-[85%]! md:w-[calc((100%-3rem)/3.25)]! cursor-grab active:cursor-grabbing"
             >
               <article
