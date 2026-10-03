@@ -28,17 +28,28 @@ export function StoriesSection() {
     setIsEnd(swiper.isEnd);
   };
 
-  const slidesOffsetAfter = useRef(function (this: SwiperType) {
-    const icon = nextArrowRef.current?.querySelector("svg");
-    if (!icon || !this.el) return 0;
-    return Math.max(
-      0,
-      Math.round(
-        this.el.getBoundingClientRect().right -
-          icon.getBoundingClientRect().right,
-      ),
-    );
-  }).current;
+  const [slidesOffsetAfter, setSlidesOffsetAfter] = useState(0);
+
+  useEffect(() => {
+    const calculateOffset = () => {
+      const icon = nextArrowRef.current?.querySelector("svg");
+      const swiperEl = swiperRef.current?.el;
+      if (!icon || !swiperEl) return;
+      setSlidesOffsetAfter(
+        Math.max(
+          0,
+          Math.round(
+            swiperEl.getBoundingClientRect().right -
+              icon.getBoundingClientRect().right,
+          ),
+        ),
+      );
+    };
+
+    calculateOffset();
+    window.addEventListener("resize", calculateOffset);
+    return () => window.removeEventListener("resize", calculateOffset);
+  }, [isReady]);
 
   // Effect para gerenciar a animação de imagens no hover
   useEffect(() => {
